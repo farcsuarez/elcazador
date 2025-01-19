@@ -1,0 +1,69 @@
+# Sistema operativo
+*.DS_Store
+Thumbs.db
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+
+# Entorno virtual
+venv/
+env/
+ENV/
+.vscode/
+.idea/
+
+# Archivos de configuración
+*.env
+*.ini
+*.cfg
+*.local
+
+# Django
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# Archivos de instalación
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Archivos de distribución
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+*.manifest
+.installed.cfg
+*.egg-info
+
+# Editor de texto y sistema operativo
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~
+
+# Archivos de testing
+.tox/
+.coverage
+*.cover
+.hypothesis/
+.pytest_cache/
+nosetests.xml
+test_*.xml
+
+# Archivos de documentación
+docs/_build/
+
+# Archivos de despliegue
+*.pem
+*.key
