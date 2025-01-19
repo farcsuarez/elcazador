@@ -9,7 +9,7 @@ from .models import Book, Country
 
 def index(request):
     books = Book.objects.all()
-    return render(request, 'books/index.html', {'books': books})
+    return render(request, 'books/booklist.html', {'books': books})
 
 def bookform_view(request):
     context = {}
@@ -43,3 +43,11 @@ def countryformUpdate(request, country_id):
     except Country.DoesNotExist:
         # Handle the case when the country with the given ID does not exist
         return HttpResponseNotFound("Country not found")
+
+def countrylist(request):
+    filtro = request.GET.get('filtro')
+    if filtro:
+        countries = Country.objects.filter(name__icontains=filtro).order_by('name')
+    else:
+        countries = Country.objects.all().order_by('name')
+    return render(request, 'books/countrylist.html', {'countries': countries})
